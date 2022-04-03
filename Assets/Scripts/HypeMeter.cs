@@ -3,22 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HypeMeter : MonoBehaviour
-{
+public enum HypeEventType {
+    TOY_MOVEMENT
+}
 
-    private float hypeScore = 50;
+public class HypeEvent {
+    public HypeEventType type;
+    public float hypeAmount { get; }
+
+    HypeEvent(HypeEventType type, float hypeAmount) {
+        this.type = type;
+        this.hypeAmount = hypeAmount;
+    }
+}
+
+public class HypeMeter : MonoBehaviour {
     public Text hypeScoreText;
+    public float initialHypeScore = 0f;
 
-    // Start is called before the first frame update
-    void Start(){
-        
+    private float hypeScore = 0f;
+
+    public void RegisterHypeEvent(HypeEvent hypeEvent) {
+        Debug.Log($"Register hype event {hypeEvent.type} of value {hypeEvent.hypeAmount}");
+
+        hypeScore += hypeEvent.hypeAmount;
     }
 
-    // Update is called once per frame
-    void Update(){
-        hypeScore -= 1 * Time.deltaTime;
-        hypeScoreText.text = "Debug: Hype Score " + hypeScore;
+    void Start() {
+        hypeScore = initialHypeScore;
+    }
 
-
+    void Update() {
+        hypeScore -= Time.deltaTime;
+        hypeScoreText.text = $"Debug: Hype Score {hypeScore}";
     }
 }
