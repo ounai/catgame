@@ -8,6 +8,7 @@ public class HypeMeter : MonoBehaviour
 
     private float hypeScore = 50;
     public Text hypeScoreText;
+    public Slider hypeSlider;
 
     // Start is called before the first frame update
     void Start(){
@@ -19,6 +20,7 @@ public class HypeMeter : MonoBehaviour
         hypeScore -= 1 * Time.deltaTime;
         hypeScoreText.text = "Debug: Hype Score " + hypeScore;
 
+        hypeSlider.value = hypeScore;
 
     }
 }
