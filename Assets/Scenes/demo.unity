@@ -1242,11 +1242,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511201762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.75, y: 0.04, z: 0}
+  m_LocalPosition: {x: -0.6099999, y: 0.35999995, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1983277703}
-  m_RootOrder: 3
+  m_Father: {fileID: 1787543167}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &511201764
 SpriteRenderer:
@@ -1879,11 +1879,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833244470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0.8299999, y: -0.3900001, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1983277703}
-  m_RootOrder: 2
+  m_Father: {fileID: 1624810599}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &833244472
 SpriteRenderer:
@@ -3520,6 +3520,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.52}
   m_EdgeRadius: 0
+--- !u!1 &1624810598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624810599}
+  m_Layer: 0
+  m_Name: Felix-Tail-Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624810599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624810598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.21, y: 0.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 833244471}
+  m_Father: {fileID: 1983277703}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626865184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4138,6 +4169,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1787543166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787543167}
+  m_Layer: 0
+  m_Name: Felix-Paw-Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787543167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787543166}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
+  m_LocalPosition: {x: 3.36, y: -0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 511201763}
+  m_Father: {fileID: 1983277703}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
 --- !u!1 &1789243593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,6 +4582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983277703}
   - component: {fileID: 1983277704}
+  - component: {fileID: 1983277705}
   m_Layer: 0
   m_Name: felix
   m_TagString: Untagged
@@ -4540,8 +4603,8 @@ Transform:
   m_Children:
   - {fileID: 907169718}
   - {fileID: 1978428902}
-  - {fileID: 833244471}
-  - {fileID: 511201763}
+  - {fileID: 1624810599}
+  - {fileID: 1787543167}
   m_Father: {fileID: 335674522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4596,6 +4659,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1983277705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983277702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ca596739164354881c4ad06ebb208e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catTail: {fileID: 1624810598}
+  catPaw: {fileID: 511201762}
+  hypeMeter: {fileID: 945405132}
 --- !u!1 &1997368213
 GameObject:
   m_ObjectHideFlags: 0

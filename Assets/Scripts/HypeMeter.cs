@@ -31,6 +31,10 @@ public class HypeMeter : MonoBehaviour {
         hypeScore += hypeEvent.hypeAmount;
     }
 
+    public float GetCurrentHype(){
+        return hypeScore;
+    }
+
     void Start() {
         hypeScore = initialHypeScore;
     }
