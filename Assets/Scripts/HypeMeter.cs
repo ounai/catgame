@@ -22,7 +22,8 @@ public class HypeMeter : MonoBehaviour {
     public float initialHypeScore = 50f;
 
     private float hypeScore = 0f;
-    public Slider hypeSlider;
+    private float maxHypeScore = 100f;
+    public Image hypeSliderImage;
 
     public void RegisterHypeEvent(HypeEvent hypeEvent) {
         Debug.Log($"Register hype event {hypeEvent.type} of value {hypeEvent.hypeAmount}");
@@ -36,7 +37,7 @@ public class HypeMeter : MonoBehaviour {
 
     void Update() {
         hypeScore -= Time.deltaTime;
-        hypeSlider.value = hypeScore;
+        hypeSliderImage.fillAmount = hypeScore / maxHypeScore;
         hypeScoreText.text = $"hypeScore {Mathf.Floor(hypeScore * 10) / 10}";
     }
 }
