@@ -11,7 +11,7 @@ public class HypeEvent {
     public HypeEventType type;
     public float hypeAmount { get; }
 
-    HypeEvent(HypeEventType type, float hypeAmount) {
+    public HypeEvent(HypeEventType type, float hypeAmount) {
         this.type = type;
         this.hypeAmount = hypeAmount;
     }
