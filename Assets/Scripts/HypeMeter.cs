@@ -40,7 +40,7 @@ public class HypeMeter : MonoBehaviour {
     }
 
     void Update() {
-        hypeScore -= Time.deltaTime;
+        hypeScore -= 5f * Time.deltaTime;
         hypeSliderImage.fillAmount = hypeScore / maxHypeScore;
         hypeScoreText.text = $"hypeScore {Mathf.Floor(hypeScore * 10) / 10}";
     }
