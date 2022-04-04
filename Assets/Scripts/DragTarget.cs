@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragTarget : MonoBehaviour
-{
+public class DragTarget : MonoBehaviour {
 	public LayerMask m_DragLayers;
 
 	[Range(0.0f, 100.0f)]

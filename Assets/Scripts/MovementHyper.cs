@@ -13,9 +13,12 @@ public class MovementHyper : MonoBehaviour {
 
     void Update() {
         float moveDistance = (lastPosition - (Vector2) transform.position).magnitude;
-        HypeEvent hypeEvent = new HypeEvent(HypeEventType.TOY_MOVEMENT, moveDistance * multiplier);
 
-        FindObjectOfType<HypeMeter>().GetComponent<HypeMeter>().RegisterHypeEvent(hypeEvent);
+        if (moveDistance >= 0.01f) {
+            HypeEvent hypeEvent = new HypeEvent(HypeEventType.TOY_MOVEMENT, moveDistance * multiplier);
+
+            FindObjectOfType<HypeMeter>().GetComponent<HypeMeter>().RegisterHypeEvent(hypeEvent);
+        }
         
         lastPosition = transform.position;
     }
