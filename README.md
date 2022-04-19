@@ -1,2 +1,2 @@
 # ld50
-Game for Ludum Dare #50
+Unfinished cat game
